@@ -67,7 +67,7 @@ class PersonalData extends Component{
                     <CardSection>
                         <Input
                         label="Height"
-                        placeholder="How tall are you?"
+                        placeholder="How tall are you in meter?"
                         value={this.props.height}
                         onChangeText={value => this.props.personalDataUpdate({ prop: 'height', value })}
                         />
@@ -75,7 +75,7 @@ class PersonalData extends Component{
                     <CardSection>
                         <Input
                         label="Weight"
-                        placeholder="Your weight"
+                        placeholder="Your weight in Kg"
                         value={this.props.weight}
                         onChangeText={value => this.props.personalDataUpdate({ prop: 'weight', value })}
                         />
@@ -83,14 +83,14 @@ class PersonalData extends Component{
                     <CardSection>
                         <Input
                         label="Neck Circumference"
-                        placeholder="Your Neck Circumference"
+                        placeholder="Your Neck Circumference in cm"
                         value={this.props.neckCircumference}
                         onChangeText={value => this.props.personalDataUpdate({ prop: 'neckCircumference', value })}
                         />
                     </CardSection>
                     <CardSection>
                         <Input
-                        label="Abdomen Circumference"
+                        label="Abdomen Circumference in cm"
                         placeholder="Your Abdomen Circumference"
                         value={this.props.abdomenCircumference}
                         onChangeText={value => this.props.personalDataUpdate({ prop: 'abdomenCircumference', value })}
@@ -98,7 +98,7 @@ class PersonalData extends Component{
                     </CardSection>
                     <CardSection>
                         <Input
-                        label="What is your weight goal"
+                        label="What is your weight goal in kilogram"
                         placeholder="Enter your weight here in kilogram"
                         value={this.props.weight_goal}
                         onChangeText={value => this.props.personalDataUpdate({ prop: 'weight_goal', value })}
@@ -106,7 +106,7 @@ class PersonalData extends Component{
                     </CardSection>
                     <CardSection>
                         <Input
-                        label="When do you wish to achieve this goal"
+                        label="When do you wish to achieve this goal in days"
                         placeholder="Enter your time goal"
                         value={this.props.time_goal}
                         onChangeText={value => this.props.personalDataUpdate({ prop: 'time_goal', value })}
