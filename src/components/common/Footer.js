@@ -11,8 +11,7 @@ import {Actions} from 'react-native-router-flux';
      return(
         <View style ={viewStyle}>
          <Button style={{marginRight:10}} icon={{name: 'child', type: 'font-awesome'}} onPress={()=>Actions.personalDataSave()}></Button>
-         <Button icon={{name: 'cached'}} onPress={()=>Actions.dailyPlan()}></Button>
-         <Button icon={{name: 'heart',type:'font-awesome'}} onPress={()=>Actions.dailyPlan()}></Button>
+         <Button icon={{name: 'cached'}} onPress={()=>Actions.asessment()}></Button>
          <Button icon={{name: 'heart',type:'font-awesome'}} onPress={()=>Actions.dailyPlan()}></Button>
         </View>
      )

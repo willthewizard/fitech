@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {Picker,Text,View} from 'react-native';
 import {connect} from 'react-redux';
-import {asessmentDataFetch,asessmentUpdate} from '../actions';
+import {dailyPlanFetch} from '../actions'
 import {Card,CardSection,Input,Button,Footer} from './common';
 
 
@@ -15,30 +15,65 @@ class Recommendations extends Component{
         console.log(this.props)
         return(
             <Card>
+                <View>
                 <CardSection>
                 <Text>
-                     {"BMI : "+this.props.recommendations.aerobicRec.excercise.name}
+                     {"Aerobic Recomendations : "+this.props.recommendations.aerobicRec.exercise.name}
                 </Text>
+                </CardSection>
+                <CardSection>
+                <Text>
+                     {"Calorie Consumption Per Minute : "+this.props.recommendations.aerobicRec.exercise.caloriePerMin.toFixed(2)}
+                </Text> 
+                </CardSection>
+                <CardSection>
+                <Text>
+                     {"Excercise Duration : "+this.props.recommendations.aerobicRec.duration}
+                </Text>  
+                </CardSection>
+            </View>
+
+            <View>
+                <CardSection>
+                <Text>
+                     {"Anaerobic Recomendations : "+this.props.recommendations.anaerobicRec.exercise.name}
+                </Text>
+                </CardSection>
+                <CardSection>
+                <Text>
+                     {"Calorie Consumption Per Minute : "+this.props.recommendations.anaerobicRec.exercise.caloriePerMin.toFixed(2)}
+                </Text> 
+                </CardSection>
+                <CardSection>
+                 <Text>
+                     {"Excercise Duration : "+this.props.recommendations.anaerobicRec.duration}
+                </Text>   
                 </CardSection>
 
-                <CardSection>
-                <Text>
-                     {"BMI : "+this.props.recommendations}
-                </Text>
-                </CardSection>
+            </View>
 
+            <View>
                 <CardSection>
                 <Text>
-                     {"BMI : "+this.props.recommendations}
+                     {"Diet For Carbonhydrates in Grams : "+this.props.recommendations.foodRec.carbonGram.toFixed(2)}
                 </Text>
                 </CardSection>
-
-            
                 <CardSection>
                 <Text>
-                     {"BMI : "+this.props.recommendations}
-                </Text>
+                     {"Fat in Grams  : "+this.props.recommendations.foodRec.fatGram.toFixed(2)}
+                </Text> 
                 </CardSection>
+                <CardSection>
+                <Text>
+                     {"Protein : "+this.props.recommendations.foodRec.proteinGram.toFixed(2)}
+                </Text>  
+                </CardSection>
+                <CardSection>
+                <Text>
+                     {"Reward Points : "+this.props.recommendations.rewards.toFixed(2)}
+                </Text>  
+                </CardSection>
+            </View>
                 <CardSection>
                 <Footer />
                 </CardSection>
@@ -56,4 +91,4 @@ const mapStateToProps = (state) =>{
         }
 }
 
-export default connect(mapStateToProps, {asessmentDataFetch})(Recommendations);
+export default connect(mapStateToProps, {dailyPlanFetch})(Recommendations);

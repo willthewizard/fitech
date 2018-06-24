@@ -4,9 +4,7 @@ import {ASESSMENT_DATA_FETCH,
 
 const INITIAL_STATE ={
     bmi:'',
-    bodyFat:'',
-    baseMetabolicRate:'',
-    bodyAge:''
+    bfr:''
 }
 export default(state=INITIAL_STATE,action)=>{
     switch(action.type){

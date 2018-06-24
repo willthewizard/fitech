@@ -20,20 +20,10 @@ class Asessment extends Component{
 
                 <CardSection>
                     <Text>
-                        {"Body Fat : "+this.props.bodyFat}
+                        {"Body Fat : "+this.props.bfr}
                     </Text>
                 </CardSection>
 
-                <CardSection>
-                    <Text>
-                        {"Base Metabolic Rate : "+this.props.baseMetabolicRate}
-                    </Text>
-                </CardSection>
-                <CardSection>
-                    <Text>
-                        {"Base Metabolic Rate : "+this.props.bodyAge}
-                    </Text>
-                </CardSection>
                 <CardSection>
                     <Footer />
                 </CardSection>
@@ -45,13 +35,13 @@ class Asessment extends Component{
 const mapStateToProps = (state) =>{
     const {
         bmi,
-        bodyFat,
+        bfr,
         baseMetabolicRate,
         bodyAge
     } = state.asessment;
         return {
             bmi,
-            bodyFat,
+            bfr,
             baseMetabolicRate,
             bodyAge
         }

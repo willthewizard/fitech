@@ -29,7 +29,7 @@ const RouterComponent = ()=>{
                     title="Personal Data" />
                     <Scene key = "asessment" component = {Asessment} title = "Asessment" /> 
                     <Scene key = "dailyPlan" component = {DailyPlan} title = "Daily Plan" /> 
-                    <Scene key = "recommendations" component = {Recommendations} title = "Recommendations" /> 
+                    <Scene key = "recommendations" component = {Recommendations} title = "Smart Coach" /> 
                 </Scene>
              </Scene>
         </Router>
