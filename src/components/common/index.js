@@ -5,4 +5,6 @@ export * from './Header';
 export * from './Input';
 export * from './Spinner';
 export * from './Confirm';
-export * from './ModalForm'
+export * from './ModalForm';
+export * from './Footer';
+export * from './NavBar';

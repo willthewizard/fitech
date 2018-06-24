@@ -15,7 +15,7 @@ import {Text,View} from 'react-native';
  const styles = {
     viewStyle:{
         backgroundColor :'#66ffcc',
-        justifyContent:'center',
+        justifyContent:'flex-end',
         alignItems:'center',
         height:60,
         paddingTop:15,

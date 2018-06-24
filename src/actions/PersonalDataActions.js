@@ -1,4 +1,6 @@
 import firebase from 'firebase';
+import {Actions} from 'react-native-router-flux';
+
 import {
    PERSONAL_DATA_UPDATE,
    PERSONAL_DATA_SAVE,
@@ -51,10 +53,10 @@ export const personalDataSave = ({gender,
                 abdomenCircumference,
                 weight_goal,
                 time_goal})
-                .then((dispatch)=>{
+                .then(()=>{
 
-                    dispatch({type:PERSONAL_DATA_SAVE_SUCCESS});
-                    Actions.asessment({type:'reset'});
+                    // dispatch({type:PERSONAL_DATA_SAVE_SUCCESS});
+                    Actions.asessment();
                 })
         }
 

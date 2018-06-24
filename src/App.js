@@ -5,10 +5,13 @@ import {createStore,applyMiddleware} from 'redux';
 import ReduxThunk from 'redux-thunk';
 import firebase from 'firebase';
 import reducers from './reducers';
-import LoginForm from './components/LoginForm';
+
+
 import Router from './Router';
 
+    
 class App extends Component{
+
     componentWillMount(){
           // Initialize Firebase
           console.disableYellowBox = true;
@@ -23,10 +26,12 @@ class App extends Component{
         };
         firebase.initializeApp(config);
     }
-    render(){
+    render(){    
+
         return (
             <Provider store={createStore(reducers,{},applyMiddleware(ReduxThunk))}>
                 <Router />
+            <MainNavigator />
             </Provider>
         );
     }

@@ -5,37 +5,42 @@ import {asessmentDataFetch,asessmentUpdate} from '../actions';
 import {Card,CardSection,Input,Button,Footer} from './common';
 
 
-class Asessment extends Component{
+class Recommendations extends Component{
     componentWillMount(){
-        this.props.asessmentDataFetch()
+        console.log("hollla")
+        console.log(this.props)
     }
     render(){
+
+        console.log(this.props)
         return(
             <Card>
                 <CardSection>
                 <Text>
-                     {"BMI : "+this.props.bmi}
+                     {"BMI : "+this.props.recommendations.aerobicRec.excercise.name}
                 </Text>
                 </CardSection>
 
                 <CardSection>
-                    <Text>
-                        {"Body Fat : "+this.props.bodyFat}
-                    </Text>
+                <Text>
+                     {"BMI : "+this.props.recommendations}
+                </Text>
                 </CardSection>
 
                 <CardSection>
-                    <Text>
-                        {"Base Metabolic Rate : "+this.props.baseMetabolicRate}
-                    </Text>
+                <Text>
+                     {"BMI : "+this.props.recommendations}
+                </Text>
+                </CardSection>
+
+            
+                <CardSection>
+                <Text>
+                     {"BMI : "+this.props.recommendations}
+                </Text>
                 </CardSection>
                 <CardSection>
-                    <Text>
-                        {"Base Metabolic Rate : "+this.props.bodyAge}
-                    </Text>
-                </CardSection>
-                <CardSection>
-                    <Footer />
+                <Footer />
                 </CardSection>
             </Card>
         )
@@ -44,17 +49,11 @@ class Asessment extends Component{
 
 const mapStateToProps = (state) =>{
     const {
-        bmi,
-        bodyFat,
-        baseMetabolicRate,
-        bodyAge
-    } = state.asessment;
+        recommendations
+    } = state.dailyPlan;
         return {
-            bmi,
-            bodyFat,
-            baseMetabolicRate,
-            bodyAge
+            recommendations
         }
 }
 
-export default connect(mapStateToProps, {asessmentDataFetch})(Asessment);
+export default connect(mapStateToProps, {asessmentDataFetch})(Recommendations);

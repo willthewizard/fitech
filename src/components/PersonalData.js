@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {Picker,Text,View} from 'react-native';
 import {connect} from 'react-redux';
 import {personalDataSave,personalDataUpdate,personalDataFetch} from '../actions';
-import {Card,CardSection,Input,Button} from './common';
+import {Card,CardSection,Input,Button,Footer} from './common';
 
 
 class PersonalData extends Component{
@@ -116,6 +116,9 @@ class PersonalData extends Component{
                         <Button onPress={this.onButtonPress.bind(this)}>
                             Next
                         </Button>
+                </CardSection>
+                <CardSection>
+                  <Footer />
                 </CardSection>
                 </View>
             </Card>

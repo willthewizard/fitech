@@ -6,12 +6,16 @@ import EmployeeCreate from './components/EmployeeCreate';
 import EmployeeEdit from './components/EmployeeEdit';
 import PersonalData from './components/PersonalData';
 import Asessment from './components/Asessment';
+import DailyPlan from './components/DailyPlan';
+import Recommendations from './components/Recommendations';
+import {NavBar} from './components/common';
 
 const RouterComponent = ()=>{
+  
     return (
         <Router>
             <Scene key ="root" hideNavBar>
-                <Scene key = "auth">
+                <Scene key = "auth" >
                     <Scene key="login" component={LoginForm} title ="Please Login" initial />
                 </Scene>
                 <Scene key ="main" rightTitle="Add" onRight={()=>Actions.employeeCreate()} >
@@ -20,8 +24,12 @@ const RouterComponent = ()=>{
                     <Scene key="employeeEdit" title="Edit Employee" component={EmployeeEdit} />
                 </Scene>
                 <Scene key = "profile">
-                    <Scene key ="personalDataSave" component={PersonalData} title="Personal Data" />
+                    <Scene key ="personalDataSave"
+                    component={PersonalData} 
+                    title="Personal Data" />
                     <Scene key = "asessment" component = {Asessment} title = "Asessment" /> 
+                    <Scene key = "dailyPlan" component = {DailyPlan} title = "Daily Plan" /> 
+                    <Scene key = "recommendations" component = {Recommendations} title = "Recommendations" /> 
                 </Scene>
              </Scene>
         </Router>

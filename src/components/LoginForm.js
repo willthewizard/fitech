@@ -2,8 +2,8 @@ import React,{Component} from 'react';
 import {View,Text} from 'react-native'
 import {connect} from 'react-redux';
 import {emailChanged,passwordChanged,loginUser} from '../actions';
-import {Card,CardSection,Input,Button,Header,Spinner} from './common';
-
+import {Card,CardSection,Input,Button,Header,Spinner,Footer} from './common';
+import EmployeeList from './EmployeeList';
 class LoginForm extends Component{
     onEmailChange(text){
         this.props.emailChanged(text)
@@ -37,6 +37,7 @@ class LoginForm extends Component{
         }
     }
     render(){
+  
         return (
             <Card>
                 <Header headerText ="Fitech"/>
@@ -63,7 +64,12 @@ class LoginForm extends Component{
                 <CardSection>
                     {this.renderButton()}
                 </CardSection>
+                <CardSection>
+
+                    <Footer />
+                </CardSection>
             </Card>
+  
 
         )
     }
